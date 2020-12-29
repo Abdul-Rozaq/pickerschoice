@@ -236,12 +236,10 @@ td {
 
 .order__input {
   text-align: center;
-  /* font-size: 18px; */
   outline: none;
 }
 
 .order__btn {
-  /* font-size: 25px; */
   padding: 10px;
   height: 40px;
   cursor: pointer;
@@ -255,7 +253,6 @@ td {
   color: var(--green);
   font-weight: 600;
   letter-spacing: 5px;
-  /* font-size: 30px; */
 }
 
 .order__input {
@@ -296,7 +293,6 @@ td {
 .order__checkout {
   border-radius: 30px;
   padding: 20px 10px;
-  /* font-size: 22px; */
   position: relative;
   top: 10px;
   cursor: pointer;

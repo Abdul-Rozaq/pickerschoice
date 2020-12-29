@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Picker's Choice - fruit sales and delivery</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html">
+            <img src="/images/homepage/logo.png" alt="pickers choice" class="header__logo">
+        </a>
+        <nav class="header__nav">
+            <a href="/about.html" class="header__nav-link">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="">
+            
+            <div class="order">
+                
+                <div class="order__countBox">
+                    <p class="order__menu">Order menu                        
+                        <img src="/images/cart.png" alt="" class="countBasket">
+                        <span id="basket" class="count">0</span>
+                    </p>
+                </div>
+                
+                <div class="order__contentBox">
+                    <!-- <div class="order__content">
+                        <div class="order__imgBox">
+                            <img src="/images/products/oranges.jpg" alt="" class="order__img">
+                        </div>
+                        <div class="order__info">
+                            <h2 class="order__title">Orange</h2>
+                            <p class="order__desc">1 set (5 pcs)</p>
+                            <p class="order__price">1000 ngn</p>
+                        </div>
+                        <div class="order__cta">
+                            <button id="decrement" class="order__btn">-</button>
+                            <input id="input" type="number" class="order__input">
+                            <button id="increment" class="order__btn">+</button>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="order__checkoutBox">
+                    <div class="order__total">
+                        <p class="order__totalPrice">Total: <span id="total"></span>
+                        </p>
+                    </div>
+                    <button class="order__checkout">
+                        proceed to checkout
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="modal__overlay">
+            <div class="modal">
+                <div class="closeBtn">&#10005;</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>price</th>
+                            <th>QTY</th>
+                            <th>Sub-total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="basket__content">
+                        <!-- <tr>
+                            <td>Apple</td>
+                            <td>1000</td>
+                            <td>2</td>
+                            <td>2000</td>
+                        </tr> -->
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total</strong></td>
+                            <td class="basket__total">5000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <h4>Delivery information</h4>
+                <form action="">
+                    <input type="text" placeholder="Your name" class="modal__name" required>
+                    <input type="phone" placeholder="Phone address" class="modal__phone" required min="11" max="11">
+                    <input type="address" placeholder="Address for delivery" class="modal__address" required>
+                    <input type="submit" value="submit" class="modal__submit">
+                </form>
+                <div class="errorMsg"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_JGuLXN8NEkDYgcw1rLZrx");
+        })();
+    </script>
+</body>
+</html>

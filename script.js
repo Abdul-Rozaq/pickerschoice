@@ -448,7 +448,7 @@ function init() {
     ? JSON.parse(localStorage.getItem("basket"))
     : localStorage.setItem("basket", JSON.stringify([]));
 
-  basketUI.textContent = basket.length;
+  basketUI.textContent = basket?.length;
 }
 init();
 

@@ -283,7 +283,6 @@ td {
 }
 
 .order__totalPrice {
-  /* font-size: 25px; */
   border-bottom: 1px solid var(--green);
   position: relative;
   bottom: 10px;
@@ -325,7 +324,7 @@ td {
 
 .closeBtn {
   text-align: right;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--orange);
   cursor: pointer;
 }
@@ -418,6 +417,27 @@ td {
 
   .order__btn {
     height: 30px;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 10px;
+  }
+  .modal h4 {
+    font-size: 16px;
+  }
+
+  .modal p {
+    font-size: 15px;
+  }
+
+  .table {
+    font-size: 15px;
+  }
+
+  .modal input {
+    font-size: 16px;
+    padding: 10px;
   }
 }
 /* END OF ORDER SCREEN */

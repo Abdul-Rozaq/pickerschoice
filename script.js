@@ -504,11 +504,14 @@ function incrementCount(id) {
     localStorage.setItem("products", JSON.stringify(products));
   }
 
+  // UPDATE LOCAL STORAGE AFTER INCREMENT
   localStorage.setItem("basket", JSON.stringify(basket));
   localStorage.setItem("products", JSON.stringify(products));
 
+  // RETRIEVE THE LATEST CONTENT OF BASKET IN LOCAL STORAGE
   const newBasket = JSON.parse(localStorage.getItem("basket"));
 
+  // UPDATE THE UI
   basketUI.textContent = basket.length;
   document.getElementById(`decrement-${id}`).disabled = false;
   document.getElementById(`input-${id}`).value =
@@ -576,6 +579,7 @@ btnSubmitOrder.addEventListener("click", function (e) {
   e.preventDefault();
   let message = "";
 
+  // TURN ALL ITEMS IN BASKET TO A STRING
   for (let i = 0; i < basket.length; i++) {
     const element = basket[i];
     message = `${message}
@@ -587,6 +591,8 @@ btnSubmitOrder.addEventListener("click", function (e) {
   message = `${message}
 
 TOTAL AMOUNT OF ORDER = ${calcTotal(basket)}`;
+
+  // TEMPLATE FOR EMAIL-JS
   const template = {
     from_name: customerName.value,
     to_name: "Pickerschoice",
@@ -596,6 +602,7 @@ TOTAL AMOUNT OF ORDER = ${calcTotal(basket)}`;
     customerPhone: customerPhone.value,
   };
 
+  // SEND MAIL VIA EMAIL-JS
   if (
     customerPhone.value?.length == 11 &&
     customerName.value &&
